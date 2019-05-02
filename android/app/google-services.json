@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "908521245668",
+    "firebase_url": "https://myportifolio-64879.firebaseio.com",
+    "project_id": "myportifolio-64879",
+    "storage_bucket": "myportifolio-64879.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:908521245668:android:818441a1827db2a3",
+        "android_client_info": {
+          "package_name": "com.matheustorreao.loja_virtual"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "908521245668-7fghhn3mntvvuacfsceieclovr8vaonk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYtOXthcmvdvS-RgjIItGdqfQi0S1VvoI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "908521245668-7fghhn3mntvvuacfsceieclovr8vaonk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:908521245668:android:4b39e342366b52a8",
+        "android_client_info": {
+          "package_name": "com.matheustorreao.realtime_chat_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "908521245668-u1c5sf42vo0lo890smandgq7ookb9d12.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.matheustorreao.realtime_chat_app",
+            "certificate_hash": "840f7d1fcb3158b895d3cfb330f6c7d8f3a50e95"
+          }
+        },
+        {
+          "client_id": "908521245668-7fghhn3mntvvuacfsceieclovr8vaonk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYtOXthcmvdvS-RgjIItGdqfQi0S1VvoI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "908521245668-7fghhn3mntvvuacfsceieclovr8vaonk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
