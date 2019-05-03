@@ -31,11 +31,10 @@ class HomePage extends StatelessWidget {
                 centerTitle: true,
               ),
             ),
-            FutureBuilder(
-                future: Firestore.instance
-                    .collection('loja_virtual_app_images')
-                    .orderBy('pos')
-                    .getDocuments(),
+            StreamBuilder(
+              stream: Firestore.instance
+                  .collection('loja_virtual_app_images')
+                  .orderBy('pos').snapshots(),
                 builder: (context, snapshot) {
                   if (!snapshot.hasData)
                     return SliverToBoxAdapter(
@@ -48,21 +47,25 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                     );
-                  else
-                    print(snapshot.data);
-                  var docs = snapshot.data.documents;
-                  return SliverStaggeredGrid.count(
-                    crossAxisCount: 2,
-                    staggeredTiles: docs.map((doc) {
-                      return StaggeredTile.count(doc.data['x'], doc.data['y']);
-                    }),
-                    children: docs.map((doc) {
-                      print(doc);
-                      return FadeInImage.memoryNetwork(
-                          placeholder: kTransparentImage,
-                          image: doc.data['url']);
-                    }),
-                  );
+                  else {
+                    var docs = snapshot.data.documents;
+                    return SliverStaggeredGrid.count(
+                      crossAxisCount: 2,
+                      crossAxisSpacing: 4.0,
+                      mainAxisSpacing: 4.0,
+                      staggeredTiles: docs.map<StaggeredTile>((doc) {
+                        return StaggeredTile.count(
+                            doc.data['x'], doc.data['y']);
+                      }).toList(),
+                      children: docs.map<FadeInImage>((doc) {
+                        print(doc);
+                        return FadeInImage.memoryNetwork(
+                          fit: BoxFit.cover,
+                            placeholder: kTransparentImage,
+                            image: doc.data['url']);
+                      }).toList(),
+                    );
+                  }
                 })
           ],
         )
