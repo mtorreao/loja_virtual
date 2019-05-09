@@ -51,8 +51,8 @@ class HomePage extends StatelessWidget {
                     var docs = snapshot.data.documents;
                     return SliverStaggeredGrid.count(
                       crossAxisCount: 2,
-                      crossAxisSpacing: 4.0,
-                      mainAxisSpacing: 4.0,
+                      crossAxisSpacing: 1.0,
+                      mainAxisSpacing: 1.0,
                       staggeredTiles: docs.map<StaggeredTile>((doc) {
                         return StaggeredTile.count(
                             doc.data['x'], doc.data['y']);
